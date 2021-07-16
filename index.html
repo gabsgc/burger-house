@@ -53,21 +53,21 @@
             <div class="flex-container-1">
                 <div class="flex-item-1">
                     <h2>
-                        Inscreva-se e receba <br> promoções exclusivas!
+                        Inscreva-se e receba <br><span id="promo">promoções exclusivas!</span>
                     </h2>
                 </div>
                 <div class="flex-item-1">
-                    <form action="/" method="post" id="subscribe-form">
+                    <form action="/" method="post" id="subscribe-form" name="subscribe">
                         <div>
-                            <label for="user-name">Nome:</label>
-                            <input type="text" name="user-name" name="user-name" placeholder="Digite seu nome">
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" name="nome" placeholder="Digite seu nome">
                         </div>
                         <div>
                             <label for="email">Email:</label>
                             <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
                         </div>
                         <div>
-                            <button type="submit">
+                            <button type="button" onclick="validar()">
                                 Inscrever-se
                             </button>
                         </div>  
@@ -75,12 +75,40 @@
                 </div>
             </div>
         </div>
-
         <footer>
             <p>Desenvolvido com ❤︎ por Gabriela Garcia</p>
+            </br>
             <a href="https://www.hiringcoders.com.br/" target="_blank" id="link">
                 Desafio #01 Hiring Coders
             </a>
         </footer>
+
+        <script>
+            function validar() {
+                if (document.subscribe.nome.value == "") {
+                    alert("Por favor, informe seu Nome");
+                    document.subscribe.nome.value.focus();
+                    return;
+                }
+
+                if (document.subscribe.email.value == "") {
+                    alert("Por favor, informe o seu E-mail");
+                    document.subscribe.email.focus();
+                    return;
+                }
+
+                confirmar = confirm("Você deseja realmente se inscrever?")
+
+                if (confirmar == true) {
+                    alert("Sua inscrição foi realizada com sucesso! Em breve, você terá acesso a descontos exclusivos da Burger House =)")
+
+                    var email = document.getElementById('email');
+                    localStorage.setItem('email', email.value);
+
+                    document.getElementById("subscribe-form").reset();
+                }
+            }
+
+        </script>
     </body>
 </html>
