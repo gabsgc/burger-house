@@ -1,8 +1,10 @@
 <div align="center">
     <h1>Black Friday Burger House</h1>
-    <p>Desafio #01 Landing Page - Black Friday desenvolvido durante o programa Hiring Coders. </br>
-    Desenvolvido por Gabriela Garcia 👩‍💻.</p>
+    <img src="https://github.com/gabsgc/burger-house/blob/master/burger-house.png" width="800px">
 </div>
+
+## 📝 Descrição
+Desafio #01 Landing Page - Black Friday desenvolvido durante o programa [Hiring Coders](https://www.hiringcoders.com.br/).
 
 ## :computer: Tecnologias
 
